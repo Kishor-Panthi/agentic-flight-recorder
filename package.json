@@ -1,0 +1,47 @@
+{
+  "name": "agentic-flight-recorder",
+  "version": "0.1.0",
+  "description": "Universal observability for AI agents. See what your agents are doing, why, and at what cost.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "afr": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "dev:dashboard": "cd dashboard && npm run dev",
+    "lint": "eslint src/",
+    "test": "vitest",
+    "start": "node dist/cli/index.js"
+  },
+  "keywords": ["ai", "agent", "observability", "monitoring", "security", "audit", "openclaw", "langchain", "crewai"],
+  "license": "MIT",
+  "author": "Kishor Panthi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gorkha-panther/agentic-flight-recorder"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "express": "^4.21.0",
+    "nanoid": "^5.0.0",
+    "ws": "^8.16.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/express": "^4.17.0",
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.5.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
